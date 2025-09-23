@@ -1,0 +1,29 @@
+# Python 3.10+ recommended
+
+# Core
+tensorflow==2.16.1
+numpy>=1.24,<2.0
+scipy>=1.11,<2.0
+h5py>=3.10
+pyyaml>=6.0.1
+
+# Modeling & evaluation
+scikit-learn>=1.3
+matplotlib>=3.8
+
+# Tokenization (Hugging Face tokenizer support)
+transformers>=4.40,<5.0
+
+# Explainability
+lime>=0.2.0.1
+
+# Optional: data downloader for raw bundle (used by scripts/download_data.sh)
+gdown>=4.7
+
+# GUI tools (PyQt5 app; Tkinter is stdlib)
+PyQt5>=5.15
+
+# Notes:
+# - If you prefer HDF5 checkpoints, `h5py` is included.
+# - For Apple Silicon (optional):
+#     # pip install tensorflow-macos tensorflow-metal

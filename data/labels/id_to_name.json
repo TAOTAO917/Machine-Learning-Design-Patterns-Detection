@@ -1,0 +1,13 @@
+{
+  "0": "Cascade",
+  "1": "Embeddings",
+  "2": "Endsembles",
+  "3": "FeatureCross",
+  "4": "HashedFeature",
+  "5": "Multilabel",
+  "6": "MultimodalInput",
+  "7": "NeutralClass",
+  "8": "Rebalancing",
+  "9": "Reframing",
+  "10": "nonMLDP"
+}

@@ -1,0 +1,56 @@
+# === Python general ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.log
+
+# === Virtual environments ===
+venv/
+.env/
+.venv/
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Checkpoints & results ===
+checkpoints/
+results/
+
+# === Data ===
+data/raw/
+data/processed/
+data/cleaned/
+!data/labels/id_to_name.json   # keep label map (small & useful)
+
+# === Temporary outputs ===
+*.tmp
+*.bak
+*.out
+*.csv
+*.tsv
+
+# === Figures / Explanations (regenerate any time) ===
+results/figures/
+results/explanations/
+results/logs/
+
+# === Models ===
+*.h5
+*.keras
+*.ckpt
+*.pb
+
+# === Jupyter ===
+.ipynb_checkpoints/
+*.ipynb

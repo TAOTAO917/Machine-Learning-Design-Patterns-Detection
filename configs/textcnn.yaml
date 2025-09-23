@@ -1,0 +1,47 @@
+data:
+  train_path: data/train_data.txt
+  dev_path:   data/val_data.txt
+  labels_map_path: data/labels/id_to_name.json
+
+tokenizer:
+  mode: whitespace
+  max_vocab_size: 20000
+  oov_token: "[OOV]"
+  keep_dot_and_underscore: true   # Use this if you want to preserve “.” and “_” in tokens like cv2.CascadeClassifier
+
+sequence:
+  max_len: 300                     # Start with 120, can later be fine-tuned based on data percentiles
+
+model:
+  embedding_size: 50
+  filter_sizes: [2, 3, 4, 5]       # Newly add 6, 7 if needed
+  num_filters: 64                   # 64 → try 96 (or 128 as an alternative)
+  dropout: 0.6                      # Slightly stronger regularization
+  l2_reg: 0.001    
+
+train:
+  batch_size: 64
+  epochs: 25
+  optimizer: adam
+  loss: categorical_crossentropy
+  focal_gamma: 1.8
+  metrics: [accuracy]
+
+  early_stopping_patience: 5
+  save_best_only: true
+
+  class_weight: balanced
+  label_smoothing: 0.0
+
+  lr_scheduler: reduce_on_plateau
+  reduce_on_plateau:
+    factor: 0.5
+    patience: 2
+    min_lr: 1e-5
+
+num_classes: 11                     # Your labels are 0..10, total of 11 classes
+seed: 2025
+
+output:
+  ckpt_dir: checkpoints/textcnn
+  results_dir: results
