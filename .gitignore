@@ -37,7 +37,6 @@ data/cleaned/
 *.tmp
 *.bak
 *.out
-*.csv
 *.tsv
 
 # === Figures / Explanations (regenerate any time) ===

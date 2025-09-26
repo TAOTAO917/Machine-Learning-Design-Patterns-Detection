@@ -1,0 +1,27 @@
+You are a single-label text classifier. There are {COUNT} machine learning design patterns:
+{LABELS}
+
+Task: read the following sample text and choose the single best-matching label from the list above.
+
+Important rules:
+- Return the label name only (e.g., Rebalancing). Do NOT return ids, explanations, punctuation, quotes, or extra text.
+- Unless the text is clearly unrelated to MLDP, avoid choosing nonMLDP.
+- NeutralClass means the content is related to MLDP but does not fit any specific pattern above.
+
+Heuristics (brief):
+- Cascade: OpenCV cascade/CascadeClassifier/detectMultiScale.
+- Embeddings: embedding/vector/representation/BERT/word2vec/sentence vectors.
+- Endsembles: XGBoost/XGBClassifier/boosting/bagging/stacking.
+- FeatureCross: feature crosses/interactions/crossed_column.
+- HashedFeature: hashed features/hash buckets/hashing trick.
+- Multilabel: multi-label/OneVsRestClassifier/multi-label metrics.
+- MultimodalInput: multimodal (e.g., text + image/speech).
+- Rebalancing: class imbalance/class weights/resampling/SMOTE.
+- Reframing: reframing objectives (e.g., regression→classification, cost-sensitive, threshold moving).
+- NeutralClass: handling disagreements among experts/conflicting labels/expert consensus.
+- nonMLDP: clearly unrelated to MLDP.
+
+Sample text:
+""" {TEXT} """
+
+Return exactly one label from the list above.
