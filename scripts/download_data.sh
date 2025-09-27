@@ -9,6 +9,7 @@ mkdir -p data/raw
 
 echo ">>> Downloading raw dataset from Google Drive..."
 # Requires: pip install gdown
+gdown --id 13ALTcd_Kx6tV4cET-LiYq4jwPIXASDwJ -O data/raw/raw_data.zip
 
 echo ">>> Extracting raw dataset..."
 unzip -o data/raw/raw_data.zip -d data/raw

@@ -30,8 +30,7 @@ This dataset was **collected from GitHub repositories** by the author. The goal 
 If you still want the full raw bundle, you can optionally download it:
 
 ### Raw Data Availability
-The raw dataset is currently private due to publication policies. 
-It will be made publicly available later.
+Raw data with machine learning design patterns can be downloaded by gdown:
 
 ```bash
 # Optional: download the raw dataset (Google Drive via gdown)
